@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="تعرّف على دليل فعاليات الجامعة الافتراضية السورية — رسالتنا وفريقنا وقيمنا" />
+  <title>عن الدليل — دليل فعاليات SVU</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+
+<!-- Page Loader -->
+<div id="pageLoader" class="page-loader">
+  <div class="loader-logo">💡</div>
+  <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+</div>
+
+<!-- Toast -->
+<div id="toastContainer" class="toast-container position-fixed bottom-0 start-0 p-3" style="z-index:9998;"></div>
+
+<!-- ══════════════ NAVBAR ══════════════ -->
+<nav class="navbar navbar-expand-lg svu-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <div class="brand-logo-circle">🎓</div>
+      <div class="brand-text">
+        دليل الفعاليات
+        <span>الجامعة الافتراضية السورية</span>
+      </div>
+    </a>
+    <div class="d-flex align-items-center gap-2 d-lg-none">
+      <button class="dark-mode-btn"><i class="fas fa-sun"></i></button>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="navbarMain">
+      <ul class="navbar-nav mx-auto gap-1">
+        <li class="nav-item"><a class="nav-link" href="index.html"><i class="fas fa-home me-1"></i>الرئيسية</a></li>
+        <li class="nav-item"><a class="nav-link" href="events.html"><i class="fas fa-calendar-alt me-1"></i>كل الفعاليات</a></li>
+        <li class="nav-item"><a class="nav-link active" href="about.html"><i class="fas fa-info-circle me-1"></i>عن الدليل</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html"><i class="fas fa-envelope me-1"></i>اتصل بنا</a></li>
+      </ul>
+      <div class="d-flex align-items-center gap-2 mt-3 mt-lg-0">
+        <button class="dark-mode-btn d-none d-lg-flex"><i class="fas fa-sun"></i></button>
+        <a href="events.html" class="btn-nav-primary"><i class="fas fa-calendar-alt me-1"></i>الفعاليات</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ══════════════ ABOUT HERO ══════════════ -->
+<section class="about-hero">
+  <div class="deco-blob deco-blob-1"></div>
+  <div class="deco-blob deco-blob-2"></div>
+  <div class="deco-grid"></div>
+  <div class="container position-relative">
+    <!-- Breadcrumb -->
+    <div class="breadcrumb-custom mb-4 animate-fade-up">
+      <a href="index.html"><i class="fas fa-home me-1"></i>الرئيسية</a>
+      <span><i class="fas fa-chevron-left" style="font-size:0.7rem;"></i></span>
+      <span class="current">عن الدليل</span>
+    </div>
+
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6 animate-fade-up">
+        <div class="section-tag mb-3"><i class="fas fa-star me-1"></i>قصتنا</div>
+        <h1 class="page-header-title mb-4">
+          نحن نُلهم<br>
+          <span class="text-gradient">مجتمع الجامعة</span>
+        </h1>
+        <p style="color:var(--text-secondary);font-size:1.05rem;line-height:1.9;margin-bottom:1.5rem;">
+          دليل فعاليات الجامعة الافتراضية السورية هو المنصة الرسمية التي تجمع كل الفعاليات الأكاديمية والثقافية والرياضية والتقنية في مكان واحد، لتسهيل وصول طلاب الجامعة إليها وتعزيز مشاركتهم في الحياة الجامعية.
+        </p>
+        <p style="color:var(--text-secondary);font-size:1rem;line-height:1.8;">
+          انطلق الدليل عام 2023 كمبادرة طلابية، وتحوّل اليوم إلى المرجع الأول لأكثر من 8500 طالب يبحثون عن فرص التعلم والتطوير والتواصل.
+        </p>
+        <div class="d-flex gap-3 mt-4 flex-wrap">
+          <a href="events.html" class="btn-primary-custom">
+            <i class="fas fa-compass me-2"></i>استكشف الفعاليات
+          </a>
+          <a href="contact.html" class="btn-secondary-custom">
+            <i class="fas fa-handshake me-2"></i>تواصل معنا
+          </a>
+        </div>
+      </div>
+
+      <div class="col-lg-6 animate-fade-up animate-delay-2">
+        <div class="position-relative">
+          <!-- صور متداخلة -->
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+            <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=500&q=80"
+                 alt="فعاليات جامعية"
+                 style="border-radius:20px;width:100%;height:200px;object-fit:cover;border:2px solid var(--border);" />
+            <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=500&q=80"
+                 alt="مؤتمرات"
+                 style="border-radius:20px;width:100%;height:200px;object-fit:cover;border:2px solid var(--border);margin-top:2rem;" />
+            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=500&q=80"
+                 alt="ورش عمل"
+                 style="border-radius:20px;width:100%;height:200px;object-fit:cover;border:2px solid var(--border);margin-top:-1rem;" />
+            <img src="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?w=500&q=80"
+                 alt="فعاليات ثقافية"
+                 style="border-radius:20px;width:100%;height:200px;object-fit:cover;border:2px solid var(--border);" />
+          </div>
+          <!-- شارة عائمة -->
+          <div class="glass-card p-3 position-absolute"
+               style="bottom:-1rem;right:-1rem;min-width:180px;animation:floatUp 3s ease infinite;">
+            <div class="d-flex align-items-center gap-2">
+              <div style="width:40px;height:40px;border-radius:10px;background:linear-gradient(135deg,var(--primary),var(--secondary));display:flex;align-items:center;justify-content:center;font-size:1.2rem;">🏆</div>
+              <div>
+                <div style="font-weight:800;color:var(--text-white);font-size:1.1rem;">الأفضل 2024</div>
+                <div style="font-size:0.75rem;color:var(--text-muted);">جائزة الابتكار الجامعي</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ STATS SECTION ══════════════ -->
+<section class="stats-section">
+  <div class="container">
+    <div class="row g-4 text-center">
+      <div class="col-6 col-md-3 animate-fade-up animate-delay-1">
+        <div class="stat-item">
+          <div class="stat-icon mx-auto"><i class="fas fa-calendar-check"></i></div>
+          <span class="stat-number" data-target="120" data-suffix="+">0</span>
+          <div class="stat-label">فعالية مجدولة</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 animate-fade-up animate-delay-2">
+        <div class="stat-item">
+          <div class="stat-icon mx-auto"><i class="fas fa-users"></i></div>
+          <span class="stat-number" data-target="8500" data-suffix="+">0</span>
+          <div class="stat-label">طالب مشارك</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 animate-fade-up animate-delay-3">
+        <div class="stat-item">
+          <div class="stat-icon mx-auto"><i class="fas fa-chalkboard-teacher"></i></div>
+          <span class="stat-number" data-target="85" data-suffix="+">0</span>
+          <div class="stat-label">متحدث ومدرّب</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 animate-fade-up animate-delay-4">
+        <div class="stat-item">
+          <div class="stat-icon mx-auto"><i class="fas fa-award"></i></div>
+          <span class="stat-number" data-target="3" data-suffix=" سنوات">0</span>
+          <div class="stat-label">من التميّز</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ MISSION & VISION ══════════════ -->
+<section class="section-pad" style="background:var(--bg-body);">
+  <div class="container">
+    <div class="section-header animate-fade-up">
+      <div class="section-tag"><i class="fas fa-bullseye me-1"></i>رسالتنا ورؤيتنا</div>
+      <h2 class="section-title">لماذا <span class="highlight">نحن هنا؟</span></h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="row g-4 mb-5">
+      <!-- الرسالة -->
+      <div class="col-lg-6 animate-fade-up animate-delay-1">
+        <div class="about-mission-card h-100">
+          <div class="position-relative" style="z-index:1;">
+            <div style="width:60px;height:60px;background:rgba(255,255,255,0.2);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.8rem;margin-bottom:1.5rem;">🎯</div>
+            <h3 style="color:white;font-weight:800;margin-bottom:1rem;">رسالتنا</h3>
+            <p style="color:rgba(255,255,255,0.85);line-height:1.9;font-size:0.95rem;">
+              توفير منصة رقمية شاملة وسهلة الاستخدام تُمكّن طلاب وأعضاء هيئة التدريس والموظفين في الجامعة الافتراضية السورية من اكتشاف جميع الفعاليات الجامعية والمشاركة فيها بكل يُسر وفاعلية.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- الرؤية -->
+      <div class="col-lg-6 animate-fade-up animate-delay-2">
+        <div class="glass-card p-4 h-100" style="border-color:rgba(245,158,11,0.3);">
+          <div style="width:60px;height:60px;background:rgba(245,158,11,0.15);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.8rem;margin-bottom:1.5rem;border:1px solid rgba(245,158,11,0.3);">🔭</div>
+          <h3 style="color:var(--text-white);font-weight:800;margin-bottom:1rem;">رؤيتنا</h3>
+          <p style="color:var(--text-secondary);line-height:1.9;font-size:0.95rem;">
+            أن نكون المنصة الرائدة في العالم العربي لتنظيم وتوثيق الفعاليات الجامعية، وأن نُسهم في بناء مجتمع جامعي نشط ومتفاعل يُعزّز قيم التعلّم المستمر والتطوير الشخصي والمهني.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- القيم -->
+    <div class="section-header animate-fade-up">
+      <div class="section-tag"><i class="fas fa-gem me-1"></i>قيمنا</div>
+      <h2 class="section-title">ما الذي <span class="highlight">يميّزنا؟</span></h2>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-3 animate-fade-up animate-delay-1">
+        <div class="value-card">
+          <div class="value-icon" style="background:rgba(124,58,237,0.15);color:var(--primary-light);">
+            <i class="fas fa-rocket"></i>
+          </div>
+          <h5 style="color:var(--text-white);font-weight:700;margin-bottom:0.5rem;">الابتكار</h5>
+          <p style="font-size:0.88rem;color:var(--text-secondary);">نسعى دائماً لتقديم تجربة مستخدم متميزة ومبتكرة تواكب أحدث التقنيات وتلبّي احتياجات الجامعة الرقمية.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 animate-fade-up animate-delay-2">
+        <div class="value-card">
+          <div class="value-icon" style="background:rgba(16,185,129,0.15);color:var(--accent);">
+            <i class="fas fa-handshake"></i>
+          </div>
+          <h5 style="color:var(--text-white);font-weight:700;margin-bottom:0.5rem;">التعاون</h5>
+          <p style="font-size:0.88rem;color:var(--text-secondary);">نؤمن بقوة العمل الجماعي ونُعزّز التعاون بين الأقسام والكليات لتنظيم فعاليات ذات أثر حقيقي ومستدام.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 animate-fade-up animate-delay-3">
+        <div class="value-card">
+          <div class="value-icon" style="background:rgba(245,158,11,0.15);color:var(--secondary);">
+            <i class="fas fa-star"></i>
+          </div>
+          <h5 style="color:var(--text-white);font-weight:700;margin-bottom:0.5rem;">التميّز</h5>
+          <p style="font-size:0.88rem;color:var(--text-secondary);">نضع معايير عالية لجودة المحتوى والفعاليات المعروضة على المنصة لضمان تجربة استثنائية لكل مستخدم.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 animate-fade-up animate-delay-4">
+        <div class="value-card">
+          <div class="value-icon" style="background:rgba(59,130,246,0.15);color:var(--info);">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <h5 style="color:var(--text-white);font-weight:700;margin-bottom:0.5rem;">الشفافية</h5>
+          <p style="font-size:0.88rem;color:var(--text-secondary);">نلتزم بالشفافية الكاملة في جميع معلومات الفعاليات ونضمن دقة البيانات المقدّمة لمجتمعنا الجامعي.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ HOW IT WORKS ══════════════ -->
+<section class="section-pad" style="background:var(--bg-section);">
+  <div class="container">
+    <div class="section-header animate-fade-up">
+      <div class="section-tag"><i class="fas fa-cogs me-1"></i>كيف يعمل</div>
+      <h2 class="section-title">ابدأ في <span class="highlight">3 خطوات</span> بسيطة</h2>
+      <p class="section-subtitle">نجعل الوصول إلى فعاليات الجامعة سهلاً وممتعاً</p>
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="row g-4 position-relative">
+      <!-- خط الربط -->
+      <div class="d-none d-lg-block position-absolute"
+           style="top:70px;right:25%;left:25%;height:2px;background:linear-gradient(90deg,var(--primary),var(--secondary));z-index:0;"></div>
+
+      <div class="col-md-4 animate-fade-up animate-delay-1">
+        <div class="glass-card p-4 text-center position-relative" style="z-index:1;">
+          <div style="width:70px;height:70px;background:linear-gradient(135deg,var(--primary),var(--primary-dark));border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.8rem;margin:0 auto 1.25rem;box-shadow:var(--shadow-glow-s);">
+            🔍
+          </div>
+          <div style="position:absolute;top:1rem;right:1rem;width:28px;height:28px;background:var(--primary);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:800;color:white;">1</div>
+          <h5 style="color:var(--text-white);font-weight:700;margin-bottom:0.75rem;">اكتشف</h5>
+          <p style="font-size:0.88rem;color:var(--text-secondary);">تصفّح مئات الفعاليات وفلترها حسب التصنيف والتاريخ والاهتمام بسهولة تامة.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4 animate-fade-up animate-delay-2">
+        <div class="glass-card p-4 text-center position-relative" style="z-index:1;">
+          <div style="width:70px;height:70px;background:linear-gradient(135deg,var(--secondary),#E07B00);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.8rem;margin:0 auto 1.25rem;box-shadow:0 0 20px rgba(245,158,11,0.4);">
+            📋
+          </div>
+          <div style="position:absolute;top:1rem;right:1rem;width:28px;height:28px;background:var(--secondary);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:800;color:white;">2</div>
+          <h5 style="color:var(--text-white);font-weight:700;margin-bottom:0.75rem;">سجّل</h5>
+          <p style="font-size:0.88rem;color:var(--text-secondary);">احجز مقعدك في الفعالية التي تناسبك خلال ثوانٍ باستخدام نموذج الحجز السريع.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4 animate-fade-up animate-delay-3">
+        <div class="glass-card p-4 text-center position-relative" style="z-index:1;">
+          <div style="width:70px;height:70px;background:linear-gradient(135deg,var(--accent),#059669);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.8rem;margin:0 auto 1.25rem;box-shadow:0 0 20px rgba(16,185,129,0.4);">
+            🎉
+          </div>
+          <div style="position:absolute;top:1rem;right:1rem;width:28px;height:28px;background:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:800;color:white;">3</div>
+          <h5 style="color:var(--text-white);font-weight:700;margin-bottom:0.75rem;">شارك</h5>
+          <p style="font-size:0.88rem;color:var(--text-secondary);">احضر الفعالية، تعلّم وتواصل واكتسب شهادة المشاركة الإلكترونية المعتمدة.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ TEAM SECTION ══════════════ -->
+<section class="section-pad" style="background:var(--bg-body);">
+  <div class="container">
+    <div class="section-header animate-fade-up">
+      <div class="section-tag"><i class="fas fa-users me-1"></i>الفريق</div>
+      <h2 class="section-title">مَن <span class="highlight">نحن؟</span></h2>
+      <p class="section-subtitle">فريق شغوف من المطورين والمصممين وأعضاء الهيئة الأكاديمية</p>
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-3 animate-fade-up animate-delay-1">
+        <div class="team-card">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&q=80" alt="رئيس الفريق" class="team-avatar" />
+          <div class="team-name">أ.د. محمد العمر</div>
+          <div class="team-role">رئيس الدليل — أستاذ تقنية المعلومات</div>
+          <p style="font-size:0.82rem;color:var(--text-muted);margin-bottom:1rem;">15 عاماً من الخبرة في التعليم الإلكتروني والابتكار الرقمي</p>
+          <div class="team-socials">
+            <a href="#" class="team-social-btn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="team-social-btn"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="team-social-btn"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3 animate-fade-up animate-delay-2">
+        <div class="team-card">
+          <img src="https://images.unsplash.com/photo-1573496799652-408c2ac9fe98?w=300&q=80" alt="مدير التقنية" class="team-avatar" />
+          <div class="team-name">م. سارة الأحمد</div>
+          <div class="team-role">مديرة التقنية والتطوير</div>
+          <p style="font-size:0.82rem;color:var(--text-muted);margin-bottom:1rem;">متخصصة في تطوير الويب والتجارب الرقمية التفاعلية</p>
+          <div class="team-socials">
+            <a href="#" class="team-social-btn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="team-social-btn"><i class="fab fa-github"></i></a>
+            <a href="#" class="team-social-btn"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3 animate-fade-up animate-delay-3">
+        <div class="team-card">
+          <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=300&q=80" alt="منسق الفعاليات" class="team-avatar" />
+          <div class="team-name">خالد الزيدي</div>
+          <div class="team-role">منسّق الفعاليات والشراكات</div>
+          <p style="font-size:0.82rem;color:var(--text-muted);margin-bottom:1rem;">خبرة واسعة في تنظيم المؤتمرات والفعاليات الأكاديمية الكبرى</p>
+          <div class="team-socials">
+            <a href="#" class="team-social-btn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="team-social-btn"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="team-social-btn"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3 animate-fade-up animate-delay-4">
+        <div class="team-card">
+          <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=300&q=80" alt="مصممة" class="team-avatar" />
+          <div class="team-name">منى الحسن</div>
+          <div class="team-role">مصممة تجربة المستخدم (UX)</div>
+          <p style="font-size:0.82rem;color:var(--text-muted);margin-bottom:1rem;">متخصصة في تصميم واجهات المستخدم وتجارب التفاعل الرقمي</p>
+          <div class="team-socials">
+            <a href="#" class="team-social-btn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="team-social-btn"><i class="fab fa-dribbble"></i></a>
+            <a href="#" class="team-social-btn"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ ACHIEVEMENTS ══════════════ -->
+<section class="section-pad" style="background:var(--bg-section);">
+  <div class="container">
+    <div class="section-header animate-fade-up">
+      <div class="section-tag"><i class="fas fa-trophy me-1"></i>إنجازاتنا</div>
+      <h2 class="section-title">ما <span class="highlight">حقّقناه</span> معاً</h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4 animate-fade-up animate-delay-1">
+        <div class="glass-card p-4 d-flex align-items-start gap-3">
+          <div style="width:50px;height:50px;background:rgba(245,158,11,0.15);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0;border:1px solid rgba(245,158,11,0.3);">🥇</div>
+          <div>
+            <h6 style="color:var(--text-white);font-weight:700;margin-bottom:0.3rem;">جائزة أفضل مبادرة رقمية 2024</h6>
+            <p style="font-size:0.85rem;color:var(--text-muted);margin:0;">من وزارة التعليم العالي السورية تقديراً للإبداع في تحقيق التعليم الرقمي</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 animate-fade-up animate-delay-2">
+        <div class="glass-card p-4 d-flex align-items-start gap-3">
+          <div style="width:50px;height:50px;background:rgba(124,58,237,0.15);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0;border:1px solid rgba(124,58,237,0.3);">📊</div>
+          <div>
+            <h6 style="color:var(--text-white);font-weight:700;margin-bottom:0.3rem;">500+ فعالية موثّقة</h6>
+            <p style="font-size:0.85rem;color:var(--text-muted);margin:0;">منذ الإطلاق عام 2023 حتى اليوم، وثّقنا أكثر من 500 فعالية ناجحة</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 animate-fade-up animate-delay-3">
+        <div class="glass-card p-4 d-flex align-items-start gap-3">
+          <div style="width:50px;height:50px;background:rgba(16,185,129,0.15);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0;border:1px solid rgba(16,185,129,0.3);">⭐</div>
+          <div>
+            <h6 style="color:var(--text-white);font-weight:700;margin-bottom:0.3rem;">تقييم 4.9 / 5 من المستخدمين</h6>
+            <p style="font-size:0.85rem;color:var(--text-muted);margin:0;">استناداً إلى أكثر من 3000 تقييم من مجتمع الجامعة الافتراضية</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ CTA ══════════════ -->
+<section class="section-pad" style="background:var(--bg-body);">
+  <div class="container">
+    <div class="row justify-content-center animate-fade-up">
+      <div class="col-lg-10">
+        <div style="background:linear-gradient(135deg,var(--primary),var(--secondary),var(--accent));padding:4rem;border-radius:var(--radius-xl);text-align:center;position:relative;overflow:hidden;">
+          <div style="position:absolute;inset:0;background-image:radial-gradient(circle at 30% 50%,rgba(255,255,255,0.1),transparent 50%),radial-gradient(circle at 70% 50%,rgba(255,255,255,0.07),transparent 50%);pointer-events:none;"></div>
+          <div class="position-relative">
+            <h2 style="color:white;font-size:clamp(1.6rem,4vw,2.5rem);font-weight:900;margin-bottom:1rem;">
+              جاهز للانضمام إلى مجتمعنا؟
+            </h2>
+            <p style="color:rgba(255,255,255,0.85);font-size:1.05rem;margin-bottom:2rem;max-width:500px;margin-left:auto;margin-right:auto;">
+              استكشف أكثر من 120 فعالية واحجز مقعدك اليوم قبل أن تنتهي المقاعد
+            </p>
+            <div class="d-flex gap-3 justify-content-center flex-wrap">
+              <a href="events.html" class="btn btn-light fw-bold px-4 py-3"
+                 style="border-radius:50px;font-family:var(--font-main);font-size:1rem;">
+                <i class="fas fa-compass me-2"></i>استكشف الفعاليات
+              </a>
+              <a href="contact.html" class="btn btn-outline-light fw-bold px-4 py-3"
+                 style="border-radius:50px;font-family:var(--font-main);font-size:1rem;">
+                <i class="fas fa-envelope me-2"></i>تواصل مع الفريق
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ FOOTER ══════════════ -->
+<footer class="svu-footer">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6">
+        <a class="navbar-brand mb-3 d-inline-flex" href="index.html">
+          <div class="brand-logo-circle me-2">🎓</div>
+          <div class="brand-text" style="color:var(--text-white);">
+            دليل الفعاليات
+            <span>الجامعة الافتراضية السورية</span>
+          </div>
+        </a>
+        <p class="footer-brand-desc">دليلك الشامل لفعاليات الجامعة الافتراضية السورية.</p>
+        <div class="footer-social-links">
+          <a href="#" class="footer-social-btn"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="footer-social-btn"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="footer-social-btn"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="footer-social-btn"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-6 col-6">
+        <h6 class="footer-heading">الصفحات</h6>
+        <ul class="footer-links">
+          <li><a href="index.html"><i class="fas fa-chevron-left"></i>الرئيسية</a></li>
+          <li><a href="events.html"><i class="fas fa-chevron-left"></i>كل الفعاليات</a></li>
+          <li><a href="about.html"><i class="fas fa-chevron-left"></i>عن الدليل</a></li>
+          <li><a href="contact.html"><i class="fas fa-chevron-left"></i>اتصل بنا</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-2 col-md-6 col-6">
+        <h6 class="footer-heading">التصنيفات</h6>
+        <ul class="footer-links">
+          <li><a href="events.html?cat=tech"><i class="fas fa-chevron-left"></i>تقنية</a></li>
+          <li><a href="events.html?cat=culture"><i class="fas fa-chevron-left"></i>ثقافة</a></li>
+          <li><a href="events.html?cat=sports"><i class="fas fa-chevron-left"></i>رياضة</a></li>
+          <li><a href="events.html?cat=science"><i class="fas fa-chevron-left"></i>علوم</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <h6 class="footer-heading">تواصل معنا</h6>
+        <ul class="footer-links">
+          <li><a href="mailto:events@svuonline.org"><i class="fas fa-envelope"></i>events@svuonline.org</a></li>
+          <li><a href="tel:+963112345678"><i class="fas fa-phone"></i>+963 11 234 5678</a></li>
+          <li><a href="#"><i class="fas fa-map-marker-alt"></i>دمشق، سوريا</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copyright mb-0">© 2025 <span>دليل فعاليات الجامعة الافتراضية السورية</span>. جميع الحقوق محفوظة.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Scroll-to-top -->
+<button class="scroll-top-btn" aria-label="العودة للأعلى"><i class="fas fa-arrow-up"></i></button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

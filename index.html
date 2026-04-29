@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="دليل فعاليات الجامعة الافتراضية — اكتشف أحدث الفعاليات الأكاديمية والثقافية والرياضية" />
+  <title>دليل فعاليات الجامعة الافتراضية</title>
+
+  <!-- Google Fonts: Cairo -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap 5 RTL -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+
+<!-- ══════════════ Page Loader ══════════════ -->
+<div id="pageLoader" class="page-loader">
+  <div class="loader-logo">🎓</div>
+  <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+  <p class="mt-3 text-muted small">جاري تحميل الدليل...</p>
+</div>
+
+<!-- ══════════════ Toast Container ══════════════ -->
+<div id="toastContainer" class="toast-container position-fixed bottom-0 start-0 p-3" style="z-index:9998;"></div>
+
+<!-- ══════════════ NAVBAR ══════════════ -->
+<nav class="navbar navbar-expand-lg svu-navbar">
+  <div class="container">
+    <!-- الشعار -->
+    <a class="navbar-brand" href="index.html">
+      <div class="brand-logo-circle">🎓</div>
+      <div class="brand-text">
+        دليل الفعاليات
+        <span>الجامعة الافتراضية السورية</span>
+      </div>
+    </a>
+
+    <!-- زر الجوال -->
+    <div class="d-flex align-items-center gap-2 d-lg-none">
+      <button class="dark-mode-btn" title="تبديل الوضع">
+        <i class="fas fa-sun"></i>
+      </button>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+
+    <!-- قائمة التنقل -->
+    <div class="collapse navbar-collapse" id="navbarMain">
+      <ul class="navbar-nav mx-auto gap-1">
+        <li class="nav-item">
+          <a class="nav-link active" href="index.html"><i class="fas fa-home me-1"></i>الرئيسية</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="events.html"><i class="fas fa-calendar-alt me-1"></i>كل الفعاليات</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html"><i class="fas fa-info-circle me-1"></i>عن الدليل</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html"><i class="fas fa-envelope me-1"></i>اتصل بنا</a>
+        </li>
+      </ul>
+      <div class="d-flex align-items-center gap-2 mt-3 mt-lg-0">
+        <button class="dark-mode-btn d-none d-lg-flex" title="تبديل الوضع">
+          <i class="fas fa-sun"></i>
+        </button>
+        <a href="events.html" class="btn-nav-primary">
+          <i class="fas fa-search me-1"></i>استكشف الفعاليات
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ══════════════ HERO SECTION ══════════════ -->
+<section class="hero-section">
+  <!-- عناصر الزخرفة -->
+  <div class="deco-blob deco-blob-1"></div>
+  <div class="deco-blob deco-blob-2"></div>
+  <div class="deco-grid"></div>
+
+  <!-- السلايدر الخلفي -->
+  <div class="hero-bg-slider">
+    <div class="hero-slide active" style="background-image:url('https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=1920&q=80')"></div>
+    <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1920&q=80')"></div>
+    <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&q=80')"></div>
+    <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?w=1920&q=80')"></div>
+  </div>
+  <div class="hero-overlay"></div>
+
+  <!-- أسهم السلايدر -->
+  <button class="slider-arrow prev" aria-label="السابق"><i class="fas fa-chevron-right"></i></button>
+  <button class="slider-arrow next" aria-label="التالي"><i class="fas fa-chevron-left"></i></button>
+
+  <!-- محتوى الهيرو -->
+  <div class="container hero-content">
+    <div class="row align-items-center">
+      <div class="col-lg-7">
+        <!-- شارة الترحيب -->
+        <div class="hero-badge">
+          <span class="dot"></span>
+          🎓 الجامعة الافتراضية السورية — الدليل الرسمي للفعاليات
+        </div>
+
+        <!-- العنوان الرئيسي -->
+        <h1 class="hero-title">
+          اكتشف <span class="gradient-text">فعاليات</span><br>
+          تُلهمك وتُطوّرك
+        </h1>
+
+        <p class="hero-subtitle">
+          دليلك الشامل لأبرز الفعاليات الأكاديمية والثقافية والرياضية والتقنية في الجامعة الافتراضية السورية. سجّل حضورك وكن جزءاً من التجربة.
+        </p>
+
+        <!-- البحث السريع -->
+        <div class="d-flex align-items-center gap-2 mb-4" style="animation: fadeInUp 0.9s ease 0.5s both; max-width:550px;">
+          <div class="flex-grow-1 position-relative">
+            <input id="heroSearchInput" type="text" class="form-control" placeholder="ابحث عن فعالية..." style="background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.25);color:white;border-radius:50px;padding:0.75rem 1.5rem 0.75rem 1rem;font-family:var(--font-main);" />
+          </div>
+          <button id="heroSearchBtn" class="btn-primary-custom px-4">
+            <i class="fas fa-search"></i> بحث
+          </button>
+        </div>
+
+        <!-- الأزرار -->
+        <div class="hero-actions">
+          <a href="events.html" class="btn-primary-custom">
+            <i class="fas fa-calendar-alt"></i> استعرض كل الفعاليات
+          </a>
+          <a href="about.html" class="btn-secondary-custom">
+            <i class="fas fa-play-circle"></i> تعرّف على الدليل
+          </a>
+        </div>
+      </div>
+
+      <!-- بطاقة الفعالية المميزة اليوم -->
+      <div class="col-lg-5 d-none d-lg-block" style="animation: fadeInLeft 1s ease 0.4s both;">
+        <div class="glass-card p-4 position-relative">
+          <div class="position-absolute top-0 end-0 m-3">
+            <span class="badge-featured badge">🔥 اليوم</span>
+          </div>
+          <div class="d-flex align-items-center gap-3 mb-3">
+            <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=300&q=80"
+                 alt="فعالية اليوم"
+                 style="width:70px;height:70px;border-radius:12px;object-fit:cover;border:2px solid var(--primary);" />
+            <div>
+              <div class="event-badge badge-tech" style="margin-bottom:6px;">تقنية</div>
+              <h6 style="color:var(--text-white);font-weight:700;margin:0;">مؤتمر الذكاء الاصطناعي 2025</h6>
+              <small style="color:var(--text-muted);">قاعة المؤتمرات الكبرى</small>
+            </div>
+          </div>
+          <div class="d-flex align-items-center gap-3 mb-3">
+            <div class="event-meta-item"><i class="fas fa-clock"></i> 10:00 صباحاً</div>
+            <div class="event-meta-item"><i class="fas fa-users"></i> 340 مسجّل</div>
+            <div class="event-meta-item"><i class="fas fa-map-marker-alt"></i> أونلاين</div>
+          </div>
+          <!-- عداد تنازلي -->
+          <div class="countdown-widget" data-target-date="2025-08-15T10:00:00"></div>
+          <a href="event.html" class="btn-primary-custom w-100 justify-content-center mt-2">
+            <i class="fas fa-ticket-alt me-1"></i> احجز مقعدك الآن
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- إحصائيات سريعة -->
+    <div class="hero-stats-bar mt-5">
+      <div class="row g-3">
+        <div class="col-6 col-md-3">
+          <div class="hero-stat-card animate-fade-up animate-delay-1">
+            <span class="hero-stat-number">+120</span>
+            <div class="hero-stat-label">فعالية هذا الفصل</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="hero-stat-card animate-fade-up animate-delay-2">
+            <span class="hero-stat-number">+8500</span>
+            <div class="hero-stat-label">طالب مسجّل</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="hero-stat-card animate-fade-up animate-delay-3">
+            <span class="hero-stat-number">12</span>
+            <div class="hero-stat-label">تصنيف فعالية</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="hero-stat-card animate-fade-up animate-delay-4">
+            <span class="hero-stat-number">4.9★</span>
+            <div class="hero-stat-label">تقييم المشاركين</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- شريط فريق التطوير -->
+  <div class="dev-credits-bar">
+    <div class="dev-credits-inner">
+      <span class="dev-credits-label"><i class="fas fa-code"></i> فريق التطوير</span>
+      <div class="dev-credits-track">
+        <span class="dev-credit-item"><i class="fas fa-user-graduate"></i> salam_234754</span>
+        <span class="dev-credit-sep">✦</span>
+        <span class="dev-credit-item"><i class="fas fa-user-graduate"></i> raghad_324482</span>
+        <span class="dev-credit-sep">✦</span>
+        <span class="dev-credit-item"><i class="fas fa-user-graduate"></i> hanen_257817</span>
+        <span class="dev-credit-sep">✦</span>
+        <span class="dev-credit-item"><i class="fas fa-user-graduate"></i> abdul_rahman_289799</span>
+        <span class="dev-credit-sep">✦</span>
+        <span class="dev-credit-item"><i class="fas fa-user-graduate"></i> noor_265452</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- مؤشرات السلايدر -->
+  <div class="slider-indicators">
+    <button class="slider-dot active" aria-label="الشريحة 1"></button>
+    <button class="slider-dot" aria-label="الشريحة 2"></button>
+    <button class="slider-dot" aria-label="الشريحة 3"></button>
+    <button class="slider-dot" aria-label="الشريحة 4"></button>
+  </div>
+</section>
+
+<!-- ══════════════ CATEGORIES SECTION ══════════════ -->
+<section class="categories-section">
+  <div class="container">
+    <div class="section-header animate-fade-up">
+      <div class="section-tag"><i class="fas fa-th-large me-1"></i>التصنيفات</div>
+      <h2 class="section-title">استكشف حسب <span class="highlight">اهتمامك</span></h2>
+      <p class="section-subtitle">تصنيفات متنوعة تغطي كل مجالات الحياة الجامعية</p>
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="row g-3">
+      <!-- تقنية -->
+      <div class="col-6 col-md-4 col-lg-2 animate-fade-up animate-delay-1">
+        <a href="events.html?cat=tech" class="category-card" style="--cat-color:#3B82F6;">
+          <div class="category-icon-wrap">💻</div>
+          <div class="category-name">تقنية</div>
+          <div class="category-count">24 فعالية</div>
+        </a>
+      </div>
+      <!-- ثقافة -->
+      <div class="col-6 col-md-4 col-lg-2 animate-fade-up animate-delay-2">
+        <a href="events.html?cat=culture" class="category-card" style="--cat-color:#F59E0B;">
+          <div class="category-icon-wrap">🎭</div>
+          <div class="category-name">ثقافة وفنون</div>
+          <div class="category-count">18 فعالية</div>
+        </a>
+      </div>
+      <!-- رياضة -->
+      <div class="col-6 col-md-4 col-lg-2 animate-fade-up animate-delay-3">
+        <a href="events.html?cat=sports" class="category-card" style="--cat-color:#10B981;">
+          <div class="category-icon-wrap">⚽</div>
+          <div class="category-name">رياضة</div>
+          <div class="category-count">15 فعالية</div>
+        </a>
+      </div>
+      <!-- علوم -->
+      <div class="col-6 col-md-4 col-lg-2 animate-fade-up animate-delay-4">
+        <a href="events.html?cat=science" class="category-card" style="--cat-color:#7C3AED;">
+          <div class="category-icon-wrap">🔬</div>
+          <div class="category-name">علوم وبحوث</div>
+          <div class="category-count">21 فعالية</div>
+        </a>
+      </div>
+      <!-- ورش عمل -->
+      <div class="col-6 col-md-4 col-lg-2 animate-fade-up animate-delay-5">
+        <a href="events.html?cat=workshop" class="category-card" style="--cat-color:#FB923C;">
+          <div class="category-icon-wrap">🛠️</div>
+          <div class="category-name">ورش عمل</div>
+          <div class="category-count">30 فعالية</div>
+        </a>
+      </div>
+      <!-- صحة ورفاهية -->
+      <div class="col-6 col-md-4 col-lg-2 animate-fade-up animate-delay-1">
+        <a href="events.html?cat=health" class="category-card" style="--cat-color:#EF4444;">
+          <div class="category-icon-wrap">🏥</div>
+          <div class="category-name">صحة ورفاهية</div>
+          <div class="category-count">12 فعالية</div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ TODAY'S EVENT BANNER ══════════════ -->
+<section class="section-pad-sm" style="background:var(--bg-body);">
+  <div class="container animate-fade-up">
+    <div class="today-event-banner">
+      <div class="flex-shrink-0 d-none d-md-block">
+        <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=300&q=80"
+             alt="فعالية اليوم"
+             style="width:120px;height:120px;object-fit:cover;border-radius:16px;border:3px solid rgba(255,255,255,0.3);" />
+      </div>
+      <div class="flex-grow-1">
+        <div class="today-event-badge">⭐ حدث اليوم المميز</div>
+        <h3 style="color:white;font-weight:800;margin-bottom:0.5rem;">مؤتمر الذكاء الاصطناعي وتطبيقاته الأكاديمية 2025</h3>
+        <p style="color:rgba(255,255,255,0.8);margin-bottom:1rem;font-size:0.9rem;">
+          <i class="fas fa-clock me-1"></i>اليوم، 10:00 ص — 4:00 م &nbsp;|&nbsp;
+          <i class="fas fa-map-marker-alt me-1"></i>قاعة المؤتمرات الكبرى &nbsp;|&nbsp;
+          <i class="fas fa-users me-1"></i>340 مشارك مسجّل
+        </p>
+        <div class="d-flex gap-2 flex-wrap">
+          <a href="event.html" class="btn btn-light btn-sm fw-bold" style="border-radius:50px;font-family:var(--font-main);">
+            <i class="fas fa-info-circle me-1"></i>التفاصيل الكاملة
+          </a>
+          <button class="btn btn-outline-light btn-sm fw-bold" style="border-radius:50px;font-family:var(--font-main);" data-bs-toggle="modal" data-bs-target="#quickBookModal">
+            <i class="fas fa-ticket-alt me-1"></i>احجز الآن
+          </button>
+        </div>
+      </div>
+      <div class="flex-shrink-0 d-none d-lg-block">
+        <div class="countdown-widget" data-target-date="2025-08-15T10:00:00"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ FEATURED EVENTS ══════════════ -->
+<section class="events-section">
+  <div class="container">
+    <div class="d-flex align-items-end justify-content-between mb-4 flex-wrap gap-3 animate-fade-up">
+      <div>
+        <div class="section-tag"><i class="fas fa-fire me-1"></i>الفعاليات البارزة</div>
+        <h2 class="section-title mb-0">أبرز <span class="highlight">فعاليات</span> الفصل</h2>
+      </div>
+      <a href="events.html" class="btn-secondary-custom">
+        عرض الكل <i class="fas fa-arrow-left me-1"></i>
+      </a>
+    </div>
+
+    <!-- فلاتر سريعة -->
+    <div class="d-flex gap-2 flex-wrap mb-4 animate-fade-up">
+      <button class="filter-btn home-filter-btn active" data-filter="all">الكل</button>
+      <button class="filter-btn home-filter-btn" data-filter="tech">💻 تقنية</button>
+      <button class="filter-btn home-filter-btn" data-filter="culture">🎭 ثقافة</button>
+      <button class="filter-btn home-filter-btn" data-filter="sports">⚽ رياضة</button>
+      <button class="filter-btn home-filter-btn" data-filter="science">🔬 علوم</button>
+      <button class="filter-btn home-filter-btn" data-filter="workshop">🛠️ ورش</button>
+    </div>
+
+    <div class="row g-4">
+      <!-- الفعالية 1 (مميزة كبيرة) -->
+      <div class="col-lg-6 animate-fade-up home-event-item" data-category="tech">
+        <div class="featured-event-card h-100">
+          <div class="featured-image-wrap">
+            <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=800&q=80" alt="مؤتمر التقنية" loading="lazy" />
+            <div class="featured-gradient"></div>
+            <div class="featured-top-badges">
+              <span class="badge-featured badge">🔥 مميز</span>
+              <span class="event-badge badge-tech">تقنية</span>
+            </div>
+            <div class="position-absolute bottom-0 end-0 p-3">
+              <div class="rating-stars">
+                <span class="rating-value">4.9</span>
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <div class="featured-body">
+            <div class="event-meta mb-2">
+              <div class="event-meta-item"><i class="fas fa-calendar-alt"></i> 15 أغسطس 2025</div>
+              <div class="event-meta-item"><i class="fas fa-clock"></i> 10:00 ص</div>
+              <div class="event-meta-item"><i class="fas fa-map-marker-alt"></i> أونلاين</div>
+            </div>
+            <h3 class="event-title" style="font-size:1.3rem;">مؤتمر الذكاء الاصطناعي وتطبيقاته الأكاديمية 2025</h3>
+            <p class="event-desc" style="-webkit-line-clamp:3;line-clamp:3;">
+              مؤتمر علمي متخصص يجمع نخبة من الباحثين والخبراء في مجال الذكاء الاصطناعي لمناقشة أحدث التطورات وتطبيقاتها في التعليم الجامعي.
+            </p>
+            <div class="d-flex align-items-center justify-content-between mt-3">
+              <div class="event-seats">
+                <span class="seats-count">60</span> مقعد متاح من 400
+              </div>
+              <a href="event.html" class="btn-primary-custom py-2 px-4">
+                <i class="fas fa-info-circle me-1"></i> التفاصيل
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- العمود الأيمن: 2 بطاقات صغيرة -->
+      <div class="col-lg-6">
+        <div class="row g-4">
+          <!-- الفعالية 2 -->
+          <div class="col-12 animate-fade-up animate-delay-1 home-event-item" data-category="culture">
+            <div class="event-card flex-row" style="flex-direction:row!important;">
+              <div class="event-card-image flex-shrink-0" style="height:auto;width:160px;min-width:160px;">
+                <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&q=80" alt="مهرجان ثقافي" loading="lazy" />
+                <div class="event-card-badge"><span class="event-badge badge-culture">ثقافة</span></div>
+              </div>
+              <div class="event-card-body">
+                <div class="event-meta">
+                  <div class="event-meta-item"><i class="fas fa-calendar-alt"></i> 20 أغسطس</div>
+                  <div class="event-meta-item"><i class="fas fa-map-marker-alt"></i> المسرح</div>
+                </div>
+                <h5 class="event-title">مهرجان الإبداع الثقافي الجامعي</h5>
+                <p class="event-desc">احتفالية فنية تجمع المواهب الجامعية في الموسيقى والشعر والفنون البصرية.</p>
+                <div class="event-card-footer">
+                  <span class="event-seats"><span class="seats-count">120</span> مقعد</span>
+                  <a href="event.html" class="btn-event-details">التفاصيل <i class="fas fa-chevron-left"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- الفعالية 3 -->
+          <div class="col-12 animate-fade-up animate-delay-2 home-event-item" data-category="workshop">
+            <div class="event-card flex-row" style="flex-direction:row!important;">
+              <div class="event-card-image flex-shrink-0" style="height:auto;width:160px;min-width:160px;">
+                <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=400&q=80" alt="ورشة عمل" loading="lazy" />
+                <div class="event-card-badge"><span class="event-badge badge-workshop">ورشة</span></div>
+              </div>
+              <div class="event-card-body">
+                <div class="event-meta">
+                  <div class="event-meta-item"><i class="fas fa-calendar-alt"></i> 22 أغسطس</div>
+                  <div class="event-meta-item"><i class="fas fa-map-marker-alt"></i> القاعة 3</div>
+                </div>
+                <h5 class="event-title">ورشة تطوير التطبيقات بـ React</h5>
+                <p class="event-desc">ورشة تدريبية مكثفة لتعلّم بناء تطبيقات الويب الحديثة من الصفر حتى الاحتراف.</p>
+                <div class="event-card-footer">
+                  <span class="event-seats"><span class="seats-count">45</span> مقعد</span>
+                  <a href="event.html" class="btn-event-details">التفاصيل <i class="fas fa-chevron-left"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- شبكة الفعاليات (3 بطاقات أفقية) -->
+      <!-- الفعالية 4 -->
+      <div class="col-md-6 col-lg-4 animate-fade-up animate-delay-1 home-event-item" data-category="sports">
+        <div class="event-card h-100">
+          <div class="event-card-image">
+            <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?w=800&q=80" alt="بطولة رياضية" loading="lazy" />
+            <div class="event-card-badge"><span class="event-badge badge-sports">رياضة</span></div>
+            <button class="event-card-favorite" data-event-id="evt4"><i class="far fa-heart"></i></button>
+            <div class="event-card-overlay"></div>
+          </div>
+          <div class="event-card-body">
+            <div class="event-meta">
+              <div class="event-meta-item"><i class="fas fa-calendar-alt"></i> 25 أغسطس</div>
+              <div class="event-meta-item"><i class="fas fa-map-marker-alt"></i> الملعب</div>
+            </div>
+            <h5 class="event-title">البطولة الرياضية الجامعية الصيفية</h5>
+            <p class="event-desc">منافسات رياضية متنوعة تشمل كرة القدم، كرة السلة، والتنس بين الأقسام الجامعية.</p>
+            <div class="event-card-footer">
+              <span class="event-seats"><span class="seats-count">200</span> مقعد</span>
+              <a href="event.html" class="btn-event-details">التفاصيل <i class="fas fa-chevron-left"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- الفعالية 5 -->
+      <div class="col-md-6 col-lg-4 animate-fade-up animate-delay-2 home-event-item" data-category="science">
+        <div class="event-card h-100">
+          <div class="event-card-image">
+            <img src="https://images.unsplash.com/photo-1532094349884-543559c88b37?w=800&q=80" alt="معرض علمي" loading="lazy" />
+            <div class="event-card-badge"><span class="event-badge badge-science">علوم</span></div>
+            <button class="event-card-favorite" data-event-id="evt5"><i class="far fa-heart"></i></button>
+            <div class="event-card-overlay"></div>
+          </div>
+          <div class="event-card-body">
+            <div class="event-meta">
+              <div class="event-meta-item"><i class="fas fa-calendar-alt"></i> 1 سبتمبر</div>
+              <div class="event-meta-item"><i class="fas fa-map-marker-alt"></i> المختبر</div>
+            </div>
+            <h5 class="event-title">معرض المشاريع البحثية 2025</h5>
+            <p class="event-desc">منصة لعرض أبحاث ومشاريع الطلاب الجامعيين أمام لجنة من أبرز الأساتذة والمتخصصين.</p>
+            <div class="event-card-footer">
+              <span class="event-seats"><span class="seats-count">180</span> مقعد</span>
+              <a href="event.html" class="btn-event-details">التفاصيل <i class="fas fa-chevron-left"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- الفعالية 6 -->
+      <div class="col-md-6 col-lg-4 animate-fade-up animate-delay-3 home-event-item" data-category="health">
+        <div class="event-card h-100">
+          <div class="event-card-image">
+            <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&q=80" alt="صحة" loading="lazy" />
+            <div class="event-card-badge"><span class="event-badge badge-health">صحة</span></div>
+            <button class="event-card-favorite" data-event-id="evt6"><i class="far fa-heart"></i></button>
+            <div class="event-card-overlay"></div>
+          </div>
+          <div class="event-card-body">
+            <div class="event-meta">
+              <div class="event-meta-item"><i class="fas fa-calendar-alt"></i> 5 سبتمبر</div>
+              <div class="event-meta-item"><i class="fas fa-map-marker-alt"></i> عيادة الجامعة</div>
+            </div>
+            <h5 class="event-title">أسبوع الصحة والرفاهية الجامعية</h5>
+            <p class="event-desc">فعاليات تثقيفية وورش عمل عن الصحة النفسية والجسدية تستهدف الطلاب وأعضاء الهيئة التدريسية.</p>
+            <div class="event-card-footer">
+              <span class="event-seats"><span class="seats-count">90</span> مقعد</span>
+              <a href="event.html" class="btn-event-details">التفاصيل <i class="fas fa-chevron-left"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-5 animate-fade-up">
+      <a href="events.html" class="btn-accent-custom">
+        <i class="fas fa-grid-2 me-2"></i> استعرض جميع الفعاليات (120+)
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ STATS SECTION ══════════════ -->
+<section class="stats-section">
+  <div class="container">
+    <div class="row g-4 text-center">
+      <div class="col-6 col-md-3 animate-fade-up animate-delay-1">
+        <div class="stat-item">
+          <div class="stat-icon mx-auto"><i class="fas fa-calendar-check"></i></div>
+          <span class="stat-number" data-target="120" data-suffix="+">0</span>
+          <div class="stat-label">فعالية مجدولة</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 animate-fade-up animate-delay-2">
+        <div class="stat-item">
+          <div class="stat-icon mx-auto"><i class="fas fa-users"></i></div>
+          <span class="stat-number" data-target="8500" data-suffix="+">0</span>
+          <div class="stat-label">طالب مشارك</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 animate-fade-up animate-delay-3">
+        <div class="stat-item">
+          <div class="stat-icon mx-auto"><i class="fas fa-chalkboard-teacher"></i></div>
+          <span class="stat-number" data-target="85" data-suffix="+">0</span>
+          <div class="stat-label">متحدث ومدرّب</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 animate-fade-up animate-delay-4">
+        <div class="stat-item">
+          <div class="stat-icon mx-auto"><i class="fas fa-trophy"></i></div>
+          <span class="stat-number" data-target="95" data-suffix="٪">0</span>
+          <div class="stat-label">رضا المشاركين</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ PARTNERS SECTION ══════════════ -->
+<section class="partners-section">
+  <div class="container-fluid">
+    <p class="text-center text-muted small mb-3 fw-bold" style="letter-spacing:2px;text-transform:uppercase;">شركاؤنا وداعمونا</p>
+    <div class="overflow-hidden">
+      <div class="partners-track">
+        <span class="partner-item">🏛 وزارة التعليم العالي</span>
+        <span class="partner-item">💡 شركة التقنية الذكية</span>
+        <span class="partner-item">📚 دار العلوم للنشر</span>
+        <span class="partner-item">🌐 مركز الابتكار الرقمي</span>
+        <span class="partner-item">🎓 الأكاديمية الأكاديمية</span>
+        <span class="partner-item">🔬 مختبرات البحث العلمي</span>
+        <span class="partner-item">🏛 وزارة التعليم العالي</span>
+        <span class="partner-item">💡 شركة التقنية الذكية</span>
+        <span class="partner-item">📚 دار العلوم للنشر</span>
+        <span class="partner-item">🌐 مركز الابتكار الرقمي</span>
+        <span class="partner-item">🎓 الأكاديمية الأكاديمية</span>
+        <span class="partner-item">🔬 مختبرات البحث العلمي</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ NEWSLETTER SECTION ══════════════ -->
+<section class="section-pad" style="background:var(--bg-section);">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 animate-fade-up">
+        <div class="glass-card p-5 text-center position-relative overflow-hidden">
+          <div class="deco-blob" style="width:300px;height:300px;background:var(--primary);top:-100px;left:50%;transform:translateX(-50%);opacity:0.08;filter:blur(60px);"></div>
+          <div class="section-tag mx-auto mb-3"><i class="fas fa-bell me-1"></i>البريد الإخباري</div>
+          <h2 class="section-title mb-2">لا تفوّت أي <span class="highlight">فعالية!</span></h2>
+          <p class="section-subtitle mb-4">اشترك في النشرة الإخبارية وكن أول من يعلم عن الفعاليات القادمة</p>
+          <div class="d-flex gap-2 justify-content-center flex-wrap">
+            <input type="email" class="form-control" placeholder="أدخل بريدك الإلكتروني..."
+              style="max-width:320px;border-radius:50px;background:rgba(255,255,255,0.07);border:1px solid var(--border);color:var(--text-primary);font-family:var(--font-main);padding:0.75rem 1.5rem;" />
+            <button class="btn-primary-custom" onclick="showToast('تم تسجيلك بنجاح في النشرة الإخبارية! 🎉')">
+              <i class="fas fa-paper-plane me-2"></i>اشترك الآن
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ FOOTER ══════════════ -->
+<footer class="svu-footer">
+  <div class="container">
+    <div class="row g-4">
+      <!-- عن الدليل -->
+      <div class="col-lg-4 col-md-6">
+        <a class="navbar-brand mb-3 d-inline-flex" href="index.html">
+          <div class="brand-logo-circle me-2">🎓</div>
+          <div class="brand-text" style="color:var(--text-white);">
+            دليل الفعاليات
+            <span>الجامعة الافتراضية السورية</span>
+          </div>
+        </a>
+        <p class="footer-brand-desc">
+          دليلك الشامل لاستكشاف وحجز فعاليات الجامعة الافتراضية السورية. نحن هنا لنجعل تجربتك الجامعية أكثر ثراءً وتميزاً.
+        </p>
+        <div class="footer-social-links">
+          <a href="#" class="footer-social-btn" aria-label="فيسبوك"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="footer-social-btn" aria-label="تويتر"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="footer-social-btn" aria-label="إنستغرام"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="footer-social-btn" aria-label="يوتيوب"><i class="fab fa-youtube"></i></a>
+          <a href="#" class="footer-social-btn" aria-label="تيليغرام"><i class="fab fa-telegram"></i></a>
+        </div>
+      </div>
+
+      <!-- روابط سريعة -->
+      <div class="col-lg-2 col-md-6 col-6">
+        <h6 class="footer-heading">روابط سريعة</h6>
+        <ul class="footer-links">
+          <li><a href="index.html"><i class="fas fa-chevron-left"></i>الرئيسية</a></li>
+          <li><a href="events.html"><i class="fas fa-chevron-left"></i>كل الفعاليات</a></li>
+          <li><a href="event.html"><i class="fas fa-chevron-left"></i>تفاصيل الفعالية</a></li>
+          <li><a href="about.html"><i class="fas fa-chevron-left"></i>عن الدليل</a></li>
+          <li><a href="contact.html"><i class="fas fa-chevron-left"></i>اتصل بنا</a></li>
+        </ul>
+      </div>
+
+      <!-- التصنيفات -->
+      <div class="col-lg-2 col-md-6 col-6">
+        <h6 class="footer-heading">التصنيفات</h6>
+        <ul class="footer-links">
+          <li><a href="events.html?cat=tech"><i class="fas fa-chevron-left"></i>فعاليات تقنية</a></li>
+          <li><a href="events.html?cat=culture"><i class="fas fa-chevron-left"></i>فعاليات ثقافية</a></li>
+          <li><a href="events.html?cat=sports"><i class="fas fa-chevron-left"></i>فعاليات رياضية</a></li>
+          <li><a href="events.html?cat=science"><i class="fas fa-chevron-left"></i>فعاليات علمية</a></li>
+          <li><a href="events.html?cat=workshop"><i class="fas fa-chevron-left"></i>ورش العمل</a></li>
+        </ul>
+      </div>
+
+      <!-- التواصل -->
+      <div class="col-lg-4 col-md-6">
+        <h6 class="footer-heading">تواصل معنا</h6>
+        <ul class="footer-links">
+          <li><a href="mailto:events@svuonline.org"><i class="fas fa-envelope"></i>events@svuonline.org</a></li>
+          <li><a href="tel:+963112345678"><i class="fas fa-phone"></i>+963 11 234 5678</a></li>
+          <li><a href="#"><i class="fas fa-map-marker-alt"></i>دمشق، سوريا</a></li>
+          <li><a href="#"><i class="fab fa-whatsapp"></i>واتساب الدعم</a></li>
+        </ul>
+        <div class="mt-3 p-3" style="background:rgba(124,58,237,0.1);border:1px solid rgba(124,58,237,0.2);border-radius:12px;">
+          <p class="mb-1" style="font-size:0.8rem;color:var(--text-muted);">ساعات العمل</p>
+          <p class="mb-0" style="font-size:0.85rem;color:var(--text-secondary);">الأحد — الخميس: 8 ص — 5 م</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- الحقوق -->
+    <div class="footer-bottom">
+      <p class="footer-copyright mb-0">
+        © 2025 <span>دليل فعاليات الجامعة الافتراضية السورية</span>. جميع الحقوق محفوظة.
+      </p>
+      <div class="d-flex gap-3">
+        <a href="#" style="font-size:0.8rem;color:var(--text-muted);">سياسة الخصوصية</a>
+        <a href="#" style="font-size:0.8rem;color:var(--text-muted);">شروط الاستخدام</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ══════════════ Scroll-to-top ══════════════ -->
+<button class="scroll-top-btn" aria-label="العودة للأعلى">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+<!-- ══════════════ Quick Booking Modal ══════════════ -->
+<div class="modal fade modal-custom" id="quickBookModal" tabindex="-1" aria-labelledby="quickBookLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="quickBookLabel"><i class="fas fa-ticket-alt me-2"></i>حجز سريع — مؤتمر الذكاء الاصطناعي</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="إغلاق"></button>
+      </div>
+      <div class="modal-body">
+        <div id="bookingSuccess"></div>
+        <form id="bookingForm">
+          <div class="mb-3">
+            <label class="form-label fw-semibold" style="font-family:var(--font-main);">الاسم الكامل *</label>
+            <input type="text" id="bookName" class="form-control form-control-custom" placeholder="أدخل اسمك الكامل" required />
+            <div class="invalid-feedback">يرجى إدخال الاسم الكامل</div>
+          </div>
+          <div class="mb-3">
+            <label class="form-label fw-semibold" style="font-family:var(--font-main);">البريد الإلكتروني *</label>
+            <input type="email" id="bookEmail" class="form-control form-control-custom" placeholder="example@svuonline.org" required />
+            <div class="invalid-feedback">يرجى إدخال بريد إلكتروني صحيح</div>
+          </div>
+          <div class="mb-3">
+            <label class="form-label fw-semibold" style="font-family:var(--font-main);">عدد المقاعد</label>
+            <select id="bookSeats" class="form-select form-control-custom">
+              <option value="1">1 مقعد</option>
+              <option value="2">2 مقعد</option>
+              <option value="3">3 مقاعد</option>
+            </select>
+          </div>
+          <div class="alert alert-info d-flex align-items-center gap-2" style="font-size:0.85rem;font-family:var(--font-main);">
+            <i class="fas fa-info-circle"></i>
+            <span>الدخول مجاني لجميع طلاب الجامعة الافتراضية السورية</span>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="font-family:var(--font-main);">إلغاء</button>
+        <button type="submit" form="bookingForm" class="btn-primary-custom">
+          <i class="fas fa-check me-2"></i>تأكيد الحجز
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Main JS -->
+<script src="assets/js/main.js"></script>
+</body>
+</html>
